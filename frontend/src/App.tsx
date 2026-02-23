@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { LayoutDashboard, Users, Presentation, FileText, Search, ChevronLeft, Bell, Lock } from 'lucide-react';
+import { LayoutDashboard, Users, Presentation, FileText, ChevronLeft, Bell, Lock } from 'lucide-react';
 
 interface DashboardData {
   totals: { lessons: number; quizzes: number; assessments: number; };
