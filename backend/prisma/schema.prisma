@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model TeacherActivity {
+  id            String   @id @default(uuid())
+  teacher_id    String
+  teacher_name  String
+  activity_type String
+  created_at    DateTime
+  subject       String
+  class_name    String
+
+  @@unique([teacher_id, activity_type, created_at, subject, class_name])
+}
