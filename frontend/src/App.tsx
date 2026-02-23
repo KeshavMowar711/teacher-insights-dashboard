@@ -20,7 +20,7 @@ export default function App() {
   useEffect(() => {
     if (isAuthenticated) {
       setLoading(true);
-      fetch(`https://teacher-insights-dashboard-s107.onrender.com=${selectedTeacher}`)
+      fetch(`https://teacher-insights-dashboard-s107.onrender.com/api/dashboard?teacher_id=${selectedTeacher}`)
         .then(res => res.json())
         .then((fetchedData: DashboardData) => {
           setData(fetchedData);
